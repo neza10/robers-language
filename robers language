@@ -1,0 +1,25 @@
+encode_map={"a':"alert","b":"brave"'c':"cap","d":"danger","e":"endangered","f":"fraud","g":"good",'h':'hat','i':"ice",'j':"joker",'k':'kangaroo','l':'loser','m':"man",
+           'n':'not now','o':'open','p':'pride','q':que','r':'ride','s':'shoot',"t":'true','u':"used",'v':'vase','w':'wait','x':'exit',y:'yolk','z':'zebra line'}
+def encode(text):
+  for ch in text:
+    if ch.lower() in encode_map:
+      word=encode_map[ch.lower()]
+      if ch.isupper():
+        result.append(word.capitalize())
+    else:
+      result.append(word)
+      else:
+        result.append(ch)
+  return"".join(result)
+decode text()
+decode_map={v:k for k,v in encode_map.items()}
+
+def decode(text):
+   result=""
+   for word in text.split():
+       lw=word.lower()
+       if lw in decode_map:
+           result+=decode_map[lw]
+       else:
+           result+=word
+return result
